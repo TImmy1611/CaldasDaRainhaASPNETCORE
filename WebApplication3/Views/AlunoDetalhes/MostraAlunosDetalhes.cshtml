@@ -1,0 +1,27 @@
+﻿@{
+    var turma = Model;
+    Layout = "_Layout2";
+
+}
+
+@foreach (AlunoDetalhesViewModel X in turma)
+{
+    <table id="tabela" border="2" width="200px">
+        <tr>
+            <td colspan="2" align="center">
+                <h3>@X.Estudante.Nome</h3>
+            </td>
+        </tr>
+        <tr>
+            <td><h5>Idade: </h5>@X.Estudante.Idade</td>
+        </tr>
+        <tr>
+            <td><h5>Titular: </h5>@X.Conta.Titular</td>
+        </tr>
+        <tr>
+            <td><h5>NrConta: </h5>@X.Conta.NrConta</td>
+        </tr>
+    </table>
+
+    <br />
+}    
